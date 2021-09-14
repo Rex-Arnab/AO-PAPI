@@ -1,10 +1,8 @@
-const fastify = require("fastify")
+const express = require("express")
 const axios = require("axios")
 const path = require("path")
 
-const app = fastify({
-  logger: true
-})
+const app = express()
 
 app.get("/random/dog", async (req, res) => {
   let resp = await axios.get("https://random.dog/woof.json");
